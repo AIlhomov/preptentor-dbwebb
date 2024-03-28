@@ -1,0 +1,6 @@
+"id","namn","latin","familj_id","manader","temp_min","temp_max","url",
+"1","Regnbåge","Onchorhynchus mykiss","1","12","10","20","https://sv.wikipedia.org/wiki/Regnb%C3%A5ge_(fisk)",
+"2","Tilapia","Oreochromis sp","2","6","21","36","https://sv.wikipedia.org/wiki/Tilapia",
+"3","Niltilapia","Oreochomis niloticus","2","6","21","36","https://en.wikipedia.org/wiki/Nile_tilapia",
+"4","Clariasmal (afrikansk ålmal)","Clarias gariepinus","3","6","21","34","https://sv.wikipedia.org/wiki/Afrikansk_vandrarmal",
+"5","Sibirisk stör","Acipenser baeri","4","12","1","26","https://sv.wikipedia.org/wiki/Sibirisk_st%C3%B6r",

@@ -1,0 +1,60 @@
+--
+-- Fills the database with data
+--
+
+DELETE FROM developer;
+DELETE FROM type;
+DELETE FROM product;
+DELETE FROM product2type;
+
+--
+-- Enable LOAD DATA LOCAL INFILE on the server.
+--
+SET GLOBAL local_infile = 1;
+SHOW VARIABLES LIKE 'local_infile';
+
+LOAD DATA LOCAL INFILE 'developer.csv'
+INTO TABLE developer
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+
+LOAD DATA LOCAL INFILE 'type.csv'
+INTO TABLE type
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+
+LOAD DATA LOCAL INFILE 'product.csv'
+INTO TABLE product
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'product2type.csv'
+INTO TABLE product2type
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;

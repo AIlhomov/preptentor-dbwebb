@@ -1,0 +1,64 @@
+<%- include('../partials/header'), {title: title}; %>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Namn</th>
+            <th>Plats</th>
+            <th>Källa</th>
+            <th>Effekt</th>
+            <th>Nyttjandegrad</th>
+            <th>Startad</th>
+            <th>Stängd</th>
+            <th>URL</th>
+            <th>Typ KraftKälla</th>
+
+        </tr>
+    </thead>
+<% for (const row of res) { %>
+    <tbody>
+        <tr>
+            <td> <%= row.id %> </td>
+            <td><a href="<%= row.url %>"><%= row.namn %></a></td>
+            <td> <%= row.plats %> </td>
+            <td> <%= row.kalla %> </td>
+            <td> <%= row.effekt %> </td>
+            <td> <%= row.nyttjandegrad %> </td>
+            <td> <%= row.startad %> </td>
+            <td> <%= row.stangd %> </td>
+            <td> <%= row.url %> </td>
+            <td> <%= row.typkraftkalla %> </td>
+        </tr>
+    </tbody>
+<% } %>
+</table>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Namn</th>
+            <th>Ort</th>
+            <th>Årsbehov</th>
+            <th>EnergiKälla</th>
+
+
+        </tr>
+    </thead>
+<% for (const row of res2) { %>
+    <tbody>
+        <tr>
+            <td> <%= row.id %> </td>
+            <td> <%= row.namn %> </td>
+            <td> <%= row.ort %> </td>
+            <td> <%= row.arsbehov %> </td>
+            <td> <%= row.energikalla %> </td>
+           
+        </tr>
+    </tbody>
+<% } %>
+</table>
+
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,70 @@
+"use strict";
+
+const readline = require('readline-promise').default;
+const formogenhet = require('./src/formogenhet.js');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function exitProgram(exitcode=0) {
+    console.log("Exiting program");
+    process.exit(exitcode);
+}
+
+function showMenu() {
+    console.log(`
+        Choose something from the menu:
+        exit, quit - Exit the program
+        menu, help - Show this menu
+
+        visa - Show all riches
+        search <str> - shows what you searched for
+        report - shows the table the boss asked for
+    `);
+}
+
+
+async function main() {
+    rl.setPrompt('Rich: ');
+    rl.prompt();
+
+    rl.on("close", exitProgram);
+
+    let res, res1, res2;
+
+    rl.on('line', async function (input) {
+        input = input.trim().toLowerCase();
+        let parts = input.split(" ");
+
+        switch (parts[0]) {
+            case "quit":
+            case "exit":
+                exitProgram();
+                break;
+            case "menu":
+            case "help":
+                showMenu();
+                break;
+            case "visa":
+                res = await formogenhet.showAll();
+                console.table(res);
+                break;
+            case "search":
+                res1 = await formogenhet.searchAll({namn: parts[1]});
+                console.table(res1);
+                break;
+            case "report":
+                res2 = await formogenhet.showSpecialFormogenhet();
+                console.table(res2);
+                break;
+            default:
+                console.log("I dont know this command, type 'menu' to seek help.");
+                break;
+        }
+        rl.prompt();
+    });
+}
+
+main();

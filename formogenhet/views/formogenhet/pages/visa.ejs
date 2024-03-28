@@ -1,0 +1,34 @@
+<%- include('../partials/header'), {title: title}; %>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Person ID</th>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>Företag</th>
+            <th>Förmögenhet</th>
+            <th>Värdering</th>
+            <th>Antal</th>
+            <th>Inköp</th>
+            <th>Värde</th>
+        </tr>
+    </thead>
+<% for (const row of res) { %>
+    <tbody>
+        <tr>
+            <td> <%= row.person_id %> </td>
+            <td> <%= row.fnamn %> </td>
+            <td> <%= row.enamn %> </td>
+            <td> <%= row.foretag %> </td>
+            <td> <%= row.formogenhet %> </td>
+            <td> <%= row.vardering %> </td>
+            <td> <%= row.antal %> </td>
+            <td> <%= row.inkop %> </td>
+            <td> <%= row.varde %> </td>
+        </tr>
+    </tbody>
+<% } %>
+</table>
+
+<%- include('../partials/footer') %>

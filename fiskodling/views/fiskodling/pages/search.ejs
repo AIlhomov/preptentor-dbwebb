@@ -1,0 +1,48 @@
+<%- include('../partials/header') %>
+
+
+
+<form method="post">
+    <label>Fisk</label>
+    <input type="text" name="fisk" placeholder="Search">
+    <input type="submit" value="Search">
+</form>
+
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Namn</th>
+            <th>Latin</th>
+            <th>Månader</th>
+            <th>Temp Min</th>
+            <th>Temp Max</th>
+            <th>Familjnamn</th>
+            <th>Start</th>
+            <th>Kg</th>
+            <th>Hus</th>
+            <th>Rum</th>
+
+        </tr>
+    </thead>
+<% for (const row of res) { %>
+    <tbody>
+        <tr>
+            <td> <%= row.id %> </td>
+            <td> <a href="<%=row.url%>"><%= row.namn %></a> </td>
+            <td> <%= row.latin %> </td>
+            <td> <%= row.manader %> </td>
+            <td> <%= row.temp_min %> </td>
+            <td> <%= row.temp_max %> </td>
+            <td> <a href="<%=row.famurl%>"><%= row.familjnamn %></a> </td>
+            <td> <%= row.start %> </td>
+            <td> <%= row.kg %> </td>
+            <td> <%= row.hus %> </td>
+            <td> <%= row.rum %> </td>
+        </tr>
+    </tbody>
+<% } %>
+</table>
+
+<%- include('../partials/footer') %>

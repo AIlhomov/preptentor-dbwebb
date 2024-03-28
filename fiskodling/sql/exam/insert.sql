@@ -1,0 +1,59 @@
+--
+-- Fills the database with data
+--
+
+DELETE FROM familj;
+DELETE FROM fisk;
+DELETE FROM odling;
+DELETE FROM tank;
+
+--
+-- Enable LOAD DATA LOCAL INFILE on the server.
+--
+SET GLOBAL local_infile = 1;
+SHOW VARIABLES LIKE 'local_infile';
+
+LOAD DATA LOCAL INFILE 'familj.csv'
+INTO TABLE familj
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+
+LOAD DATA LOCAL INFILE 'fisk.csv'
+INTO TABLE fisk
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'tank.csv'
+INTO TABLE tank
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'odling.csv'
+INTO TABLE odling
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;

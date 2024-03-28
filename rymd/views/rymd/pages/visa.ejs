@@ -1,0 +1,34 @@
+<%- include('../partials/header'), {title: title}; %>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Satellit ID</th>
+            <th>Namn</th>
+            <th>Massa</th>
+            <th>Uppskjutning</th>
+            <th>Plats</th>
+            <th>EOL</th>
+            <th>URL</th>
+            <th>Fenomen</th>
+            <th>Problem</th>
+        </tr>
+    </thead>
+<% for (const row of res) { %>
+    <tbody>
+        <tr>
+            <td> <%= row.satellit_id %> </td>
+            <td> <a href="<%= row.url %>"><%= row.namn %> </a></td> 
+            <td> <%= row.massa %> </td>
+            <td> <%= row.uppskjutning %> </td>
+            <td> <%= row.plats %> </td>
+            <td> <%= row.eol %> </td>
+            <td> <%= row.url %> </td>
+            <td> <%= row.fnamn %> </td>
+            <td> <%= row.pnamn %> </td>
+        </tr>
+    </tbody>
+<% } %>
+</table>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,8 @@
+"id","namn","plats","kalla","effekt","nyttjandegrad","startad","stangd","url",
+"HAR","Harsprånget","Luleälven","vatten","818","25","1951","","https://sv.wikipedia.org/wiki/Harspr%C3%A5nget",
+"LED","Lilla Edet","Göta älv","vatten","39","64","1926","","https://sv.wikipedia.org/wiki/Lilla_Edets_kraftverk",
+"KAR","Karlshamnsverket","Karlshamn","olja","335","11","1969","","https://sv.wikipedia.org/wiki/Karlshamnsverket",
+"LIL","Lillgrund vindkraftpark","Öresund","vind","110","34","2007","","https://sv.wikipedia.org/wiki/Lillgrunds_vindkraftpark",
+"MUN","Munkflohöjden","Jämtland","vind","49","37","2019","","https://www.gem.wiki/Munkfloh%C3%B6gen_wind_farm",
+"RIN","Ringhals 1","Väröhalvön","kärnkraft","881","87","1976","2020","https://sv.wikipedia.org/wiki/Ringhals_k%C3%A4rnkraftverk",
+"OSK","Oskarshamn 3","Simpevarp","kärnkraft","1400","93","1985","","https://sv.wikipedia.org/wiki/Oskarshamns_k%C3%A4rnkraftverk",

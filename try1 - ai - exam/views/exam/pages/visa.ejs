@@ -1,0 +1,36 @@
+<%- include('../partials/header'), {title: title}; %>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product name</th>
+            <th>Nick</th>
+            <th>Debate</th>
+            <th>Year</th>
+            <th>Developer ID</th>
+            <th>Developer Name</th>
+            <th>Product ID</th>
+            <th>Type ID</th>
+
+
+        </tr>
+    </thead>
+<% for (const row of res) { %>
+    <tbody>
+        <tr>
+            <td> <%= row.id %> </td>
+            <td> <a href="<%=row.purl%>"><%= row.pname %></a> </td>
+            <td> <%= row.nick %> </td>
+            <td> <%= row.debate %> </td>
+            <td> <%= row.year %> </td>
+            <td> <%= row.developer_id %> </td>
+            <td> <a href="<%=row.url%>"><%= row.name %></a> </td>
+            <td> <%= row.product_id %> </td>
+            <td> <%= row.type_id %> </td>
+        </tr>
+    </tbody>
+<% } %>
+</table>
+
+<%- include('../partials/footer') %>
